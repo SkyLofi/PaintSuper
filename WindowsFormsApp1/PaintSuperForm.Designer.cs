@@ -37,6 +37,9 @@
             this.Rectangle_Tool_Button = new System.Windows.Forms.Button();
             this.Circle_Tool_Button = new System.Windows.Forms.Button();
             this.Ellipse_Tool_Button = new System.Windows.Forms.Button();
+            this.Color_Button = new System.Windows.Forms.Button();
+            this.ColorDialog = new System.Windows.Forms.ColorDialog();
+            this.Eraser_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +47,13 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 426);
+            this.pictureBox1.Size = new System.Drawing.Size(1125, 618);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // Load_Button
             // 
@@ -61,6 +68,7 @@
             this.Load_Button.TabIndex = 1;
             this.Load_Button.Text = "Load";
             this.Load_Button.UseVisualStyleBackColor = true;
+            this.Load_Button.Click += new System.EventHandler(this.Load_Button_Click);
             // 
             // Save_Button
             // 
@@ -75,6 +83,7 @@
             this.Save_Button.TabIndex = 2;
             this.Save_Button.Text = "Save";
             this.Save_Button.UseVisualStyleBackColor = true;
+            this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
             // 
             // Pen_Tool_Button
             // 
@@ -90,6 +99,7 @@
             this.Pen_Tool_Button.Text = "Pen";
             this.Pen_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Pen_Tool_Button.UseVisualStyleBackColor = true;
+            this.Pen_Tool_Button.Click += new System.EventHandler(this.Pen_Tool_Button_Click);
             // 
             // Line_Tool_Button
             // 
@@ -105,6 +115,7 @@
             this.Line_Tool_Button.Text = "Line";
             this.Line_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Line_Tool_Button.UseVisualStyleBackColor = true;
+            this.Line_Tool_Button.Click += new System.EventHandler(this.Line_Tool_Button_Click);
             // 
             // Rectangle_Tool_Button
             // 
@@ -120,6 +131,7 @@
             this.Rectangle_Tool_Button.Text = "Rectangle";
             this.Rectangle_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Rectangle_Tool_Button.UseVisualStyleBackColor = true;
+            this.Rectangle_Tool_Button.Click += new System.EventHandler(this.Rectangle_Tool_Button_Click);
             // 
             // Circle_Tool_Button
             // 
@@ -135,6 +147,7 @@
             this.Circle_Tool_Button.Text = "Circle";
             this.Circle_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Circle_Tool_Button.UseVisualStyleBackColor = true;
+            this.Circle_Tool_Button.Click += new System.EventHandler(this.Circle_Tool_Button_Click);
             // 
             // Ellipse_Tool_Button
             // 
@@ -150,12 +163,46 @@
             this.Ellipse_Tool_Button.Text = "Ellipse";
             this.Ellipse_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Ellipse_Tool_Button.UseVisualStyleBackColor = true;
+            this.Ellipse_Tool_Button.Click += new System.EventHandler(this.Ellipse_Tool_Button_Click);
             // 
-            // Form1
+            // Color_Button
+            // 
+            this.Color_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Color_Button.FlatAppearance.BorderSize = 3;
+            this.Color_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Color_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Color_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Color_Button.Location = new System.Drawing.Point(466, 27);
+            this.Color_Button.Name = "Color_Button";
+            this.Color_Button.Size = new System.Drawing.Size(55, 46);
+            this.Color_Button.TabIndex = 8;
+            this.Color_Button.Text = "color";
+            this.Color_Button.UseVisualStyleBackColor = true;
+            this.Color_Button.Click += new System.EventHandler(this.Color_Button_Click);
+            // 
+            // Eraser_Button
+            // 
+            this.Eraser_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Eraser_Button.FlatAppearance.BorderSize = 3;
+            this.Eraser_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Eraser_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Eraser_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eraser_Button.Location = new System.Drawing.Point(527, 27);
+            this.Eraser_Button.Name = "Eraser_Button";
+            this.Eraser_Button.Size = new System.Drawing.Size(55, 46);
+            this.Eraser_Button.TabIndex = 9;
+            this.Eraser_Button.Text = "Eraser";
+            this.Eraser_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eraser_Button.UseVisualStyleBackColor = true;
+            this.Eraser_Button.Click += new System.EventHandler(this.Eraser_Button_Click);
+            // 
+            // PaintSuperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1149, 642);
+            this.Controls.Add(this.Eraser_Button);
+            this.Controls.Add(this.Color_Button);
             this.Controls.Add(this.Ellipse_Tool_Button);
             this.Controls.Add(this.Circle_Tool_Button);
             this.Controls.Add(this.Rectangle_Tool_Button);
@@ -165,8 +212,9 @@
             this.Controls.Add(this.Load_Button);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "PaintSuperForm";
             this.Text = "PaintSuper";
+            this.Load += new System.EventHandler(this.PaintSuperForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -182,6 +230,9 @@
         private System.Windows.Forms.Button Rectangle_Tool_Button;
         private System.Windows.Forms.Button Circle_Tool_Button;
         private System.Windows.Forms.Button Ellipse_Tool_Button;
+        private System.Windows.Forms.Button Color_Button;
+        private System.Windows.Forms.ColorDialog ColorDialog;
+        private System.Windows.Forms.Button Eraser_Button;
     }
 }
 

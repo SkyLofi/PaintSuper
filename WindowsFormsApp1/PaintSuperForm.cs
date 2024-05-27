@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         Point px, py;
         Pen pen;
         Pen eraser = new Pen(Color.White, 50);
-        int x, y, sX, sY, cX, cY;
+        int x, y, xsize, ysize, xinitial, yinitial;
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
         public PaintSuperForm()
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             InitializeCustomComponents();
         }
-        private void InitializeCustomComponents()
+        public void InitializeCustomComponents()
         {
             this.Width = 900;
             this.Height = 600;
@@ -52,8 +52,8 @@ namespace WindowsFormsApp1
             drawing = true;
             py = e.Location;
 
-            cX = e.X;
-            cY = e.Y;
+            xinitial = e.X;
+            yinitial = e.Y;
         }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -81,28 +81,28 @@ namespace WindowsFormsApp1
             x = e.X;
             y = e.Y;
 
-            sX = e.X - cX;
-            sY = e.Y - cY;
+            xsize = e.X - xinitial;
+            ysize = e.Y - yinitial;
         }
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             drawing = false;
             pen = new Pen(Barvicka, BrushSize);
-            sX = x - cX;
-            sY = y - cY;
+            xsize = x - xinitial;
+            ysize = y - yinitial;
 
             switch (drawingtool)
             {
                 case Drawingtool.ellipse:
-                    g.DrawEllipse(pen, cX, cY, sX, sY);
+                    g.DrawEllipse(pen, xinitial, yinitial, xsize, ysize);
                     break;
 
                 case Drawingtool.rectangle:
-                    g.DrawRectangle(pen, cX, cY, sX, sY);
+                    g.DrawRectangle(pen, xinitial, yinitial, xsize, ysize);
                     break;
 
                 case Drawingtool.line:
-                    g.DrawLine(pen, cX, cY, x, y);
+                    g.DrawLine(pen, xinitial, yinitial, x, y);
                     break;
             }
         }
@@ -140,14 +140,5 @@ namespace WindowsFormsApp1
                 Barvicka = colorDialog.Color;
             }
         }
-        private void PaintSuperForm_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void Eraser_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.eraser;
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
+        private void Eraser_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.eraser;    }
 }

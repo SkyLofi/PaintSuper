@@ -46,10 +46,9 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1125, 618);
+            this.pictureBox1.Size = new System.Drawing.Size(1128, 619);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
@@ -91,7 +90,7 @@
             this.Pen_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Pen_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Pen_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Pen_Tool_Button.Location = new System.Drawing.Point(161, 27);
+            this.Pen_Tool_Button.Location = new System.Drawing.Point(202, 27);
             this.Pen_Tool_Button.Name = "Pen_Tool_Button";
             this.Pen_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Pen_Tool_Button.TabIndex = 3;
@@ -107,7 +106,7 @@
             this.Line_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Line_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Line_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Line_Tool_Button.Location = new System.Drawing.Point(222, 27);
+            this.Line_Tool_Button.Location = new System.Drawing.Point(263, 27);
             this.Line_Tool_Button.Name = "Line_Tool_Button";
             this.Line_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Line_Tool_Button.TabIndex = 4;
@@ -123,7 +122,7 @@
             this.Rectangle_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Rectangle_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Rectangle_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Rectangle_Tool_Button.Location = new System.Drawing.Point(283, 27);
+            this.Rectangle_Tool_Button.Location = new System.Drawing.Point(324, 27);
             this.Rectangle_Tool_Button.Name = "Rectangle_Tool_Button";
             this.Rectangle_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Rectangle_Tool_Button.TabIndex = 5;
@@ -139,7 +138,7 @@
             this.Ellipse_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Ellipse_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Ellipse_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ellipse_Tool_Button.Location = new System.Drawing.Point(344, 27);
+            this.Ellipse_Tool_Button.Location = new System.Drawing.Point(385, 27);
             this.Ellipse_Tool_Button.Name = "Ellipse_Tool_Button";
             this.Ellipse_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Ellipse_Tool_Button.TabIndex = 7;
@@ -155,7 +154,7 @@
             this.Color_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Color_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Color_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Color_Button.Location = new System.Drawing.Point(405, 27);
+            this.Color_Button.Location = new System.Drawing.Point(494, 27);
             this.Color_Button.Name = "Color_Button";
             this.Color_Button.Size = new System.Drawing.Size(55, 46);
             this.Color_Button.TabIndex = 8;
@@ -170,7 +169,7 @@
             this.Eraser_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Eraser_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Eraser_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Eraser_Button.Location = new System.Drawing.Point(466, 27);
+            this.Eraser_Button.Location = new System.Drawing.Point(555, 27);
             this.Eraser_Button.Name = "Eraser_Button";
             this.Eraser_Button.Size = new System.Drawing.Size(55, 46);
             this.Eraser_Button.TabIndex = 9;
@@ -183,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 642);
+            this.ClientSize = new System.Drawing.Size(1152, 643);
             this.Controls.Add(this.Eraser_Button);
             this.Controls.Add(this.Color_Button);
             this.Controls.Add(this.Ellipse_Tool_Button);
@@ -196,7 +195,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PaintSuperForm";
             this.Text = "PaintSuper";
-            this.Load += new System.EventHandler(this.PaintSuperForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

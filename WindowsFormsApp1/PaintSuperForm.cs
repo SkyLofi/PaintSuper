@@ -129,6 +129,28 @@ namespace WindowsFormsApp1
                 pictureBox1.Image = bm;
             }
         }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics gdraw = e.Graphics;
+            if (drawing == true)
+            {
+                switch (drawingtool)
+                {
+                    case Drawingtool.ellipse:
+                        gdraw.DrawEllipse(pen, xinitial, yinitial, xsize, ysize);
+                        break;
+
+                    case Drawingtool.rectangle:
+                        gdraw.DrawRectangle(pen, xinitial, yinitial, xsize, ysize);
+                        break;
+
+                    case Drawingtool.line:
+                        gdraw.DrawLine(pen, xinitial, yinitial, x, y);
+                        break;
+                }
+            }
+        }
         private void Line_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.line;
         private void Pen_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.pen;
         private void Rectangle_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.rectangle;

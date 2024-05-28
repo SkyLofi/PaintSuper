@@ -15,13 +15,13 @@ namespace WindowsFormsApp1
             line,
             eraser
         }
-        ColorDialog colorDialog = new ColorDialog();
-        Color Barvicka = Color.Black;
-        int BrushSize = 1;
+        ColorDialog colordialog = new ColorDialog();
+        Color Color = Color.Black;
+        int BrushSize = 3;
         Drawingtool drawingtool;
         bool drawing = false;
         int i = 1;
-        Bitmap bm;
+        Bitmap bitmap;
         Graphics g;
         Point px, py;
         Pen pen;
@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         int x, y, xsize, ysize, xinitial, yinitial, circlesize;
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
+        int brushsizetrackbarvalue;
         public PaintSuperForm()
         {
             InitializeComponent();
@@ -39,10 +40,10 @@ namespace WindowsFormsApp1
             this.Width = 900;
             this.Height = 600;
 
-            bm = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            g = Graphics.FromImage(bm);
+            bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            g = Graphics.FromImage(bitmap);
             g.Clear(Color.White);
-            pictureBox1.Image = bm;
+            pictureBox1.Image = bitmap;
 
             openFileDialog = new OpenFileDialog();
             saveFileDialog = new SaveFileDialog();
@@ -57,10 +58,9 @@ namespace WindowsFormsApp1
         }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            pen = new Pen(Barvicka, BrushSize);
+            pen = new Pen(Color, BrushSize);
             if (drawing == true)
             {
-
                 switch (drawingtool)
                 {
                     case Drawingtool.pen:
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             drawing = false;
-            pen = new Pen(Barvicka, BrushSize);
+            pen = new Pen(Color, BrushSize);
             xsize = x - xinitial;
             ysize = y - yinitial;
 
@@ -120,7 +120,7 @@ namespace WindowsFormsApp1
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    bm.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    bitmap.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
             }
         }
@@ -130,8 +130,8 @@ namespace WindowsFormsApp1
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                bm = new Bitmap(openFileDialog.FileName);
-                pictureBox1.Image = bm;
+                bitmap = new Bitmap(openFileDialog.FileName);
+                pictureBox1.Image = bitmap;
             }
         }
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -166,9 +166,9 @@ namespace WindowsFormsApp1
         private void Ellipse_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.ellipse;
         private void Color_Button_Click(object sender, EventArgs e)
         {
-            if (colorDialog.ShowDialog() == DialogResult.OK)
+            if (colordialog.ShowDialog() == DialogResult.OK)
             {
-                Barvicka = colorDialog.Color;
+                Color = colordialog.Color;
             }
         }
         private void Eraser_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.eraser;

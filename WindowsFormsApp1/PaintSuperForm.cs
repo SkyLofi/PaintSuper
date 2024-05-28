@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         Point px, py;
         Pen pen;
         Pen eraser = new Pen(Color.White, 50);
-        int x, y, xsize, ysize, xinitial, yinitial;
+        int x, y, xsize, ysize, xinitial, yinitial, circlesize;
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
         public PaintSuperForm()
@@ -104,6 +104,11 @@ namespace WindowsFormsApp1
                 case Drawingtool.line:
                     g.DrawLine(pen, xinitial, yinitial, x, y);
                     break;
+
+                case Drawingtool.circle:
+                    circlesize = xsize;
+                    g.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
+                    break;
             }
         }
         private void Save_Button_Click(object sender, EventArgs e)
@@ -129,7 +134,6 @@ namespace WindowsFormsApp1
                 pictureBox1.Image = bm;
             }
         }
-
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics gdraw = e.Graphics;
@@ -148,6 +152,11 @@ namespace WindowsFormsApp1
                     case Drawingtool.line:
                         gdraw.DrawLine(pen, xinitial, yinitial, x, y);
                         break;
+
+                    case Drawingtool.circle:
+                        circlesize = xsize;
+                        gdraw.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
+                        break;
                 }
             }
         }
@@ -162,5 +171,7 @@ namespace WindowsFormsApp1
                 Barvicka = colorDialog.Color;
             }
         }
-        private void Eraser_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.eraser;    }
+        private void Eraser_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.eraser;
+        private void Circle_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.circle;
+    }
 }

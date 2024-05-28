@@ -57,6 +57,7 @@
             // 
             // Load_Button
             // 
+            this.Load_Button.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Load_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Load_Button.FlatAppearance.BorderSize = 3;
             this.Load_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -67,11 +68,12 @@
             this.Load_Button.Size = new System.Drawing.Size(55, 46);
             this.Load_Button.TabIndex = 1;
             this.Load_Button.Text = "Load";
-            this.Load_Button.UseVisualStyleBackColor = true;
+            this.Load_Button.UseVisualStyleBackColor = false;
             this.Load_Button.Click += new System.EventHandler(this.Load_Button_Click);
             // 
             // Save_Button
             // 
+            this.Save_Button.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Save_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Save_Button.FlatAppearance.BorderSize = 3;
             this.Save_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -82,11 +84,12 @@
             this.Save_Button.Size = new System.Drawing.Size(55, 46);
             this.Save_Button.TabIndex = 2;
             this.Save_Button.Text = "Save";
-            this.Save_Button.UseVisualStyleBackColor = true;
+            this.Save_Button.UseVisualStyleBackColor = false;
             this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
             // 
             // Pen_Tool_Button
             // 
+            this.Pen_Tool_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Pen_Tool_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Pen_Tool_Button.FlatAppearance.BorderSize = 3;
             this.Pen_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -99,11 +102,12 @@
             this.Pen_Tool_Button.TabIndex = 3;
             this.Pen_Tool_Button.Text = "Pen";
             this.Pen_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Pen_Tool_Button.UseVisualStyleBackColor = true;
+            this.Pen_Tool_Button.UseVisualStyleBackColor = false;
             this.Pen_Tool_Button.Click += new System.EventHandler(this.Pen_Tool_Button_Click);
             // 
             // Line_Tool_Button
             // 
+            this.Line_Tool_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Line_Tool_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Line_Tool_Button.FlatAppearance.BorderSize = 3;
             this.Line_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -116,11 +120,12 @@
             this.Line_Tool_Button.TabIndex = 4;
             this.Line_Tool_Button.Text = "Line";
             this.Line_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Line_Tool_Button.UseVisualStyleBackColor = true;
+            this.Line_Tool_Button.UseVisualStyleBackColor = false;
             this.Line_Tool_Button.Click += new System.EventHandler(this.Line_Tool_Button_Click);
             // 
             // Rectangle_Tool_Button
             // 
+            this.Rectangle_Tool_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Rectangle_Tool_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Rectangle_Tool_Button.FlatAppearance.BorderSize = 3;
             this.Rectangle_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -134,11 +139,12 @@
             this.Rectangle_Tool_Button.TabIndex = 5;
             this.Rectangle_Tool_Button.Text = "Rectangle";
             this.Rectangle_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Rectangle_Tool_Button.UseVisualStyleBackColor = true;
+            this.Rectangle_Tool_Button.UseVisualStyleBackColor = false;
             this.Rectangle_Tool_Button.Click += new System.EventHandler(this.Rectangle_Tool_Button_Click);
             // 
             // Ellipse_Tool_Button
             // 
+            this.Ellipse_Tool_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Ellipse_Tool_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Ellipse_Tool_Button.FlatAppearance.BorderSize = 3;
             this.Ellipse_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -151,11 +157,12 @@
             this.Ellipse_Tool_Button.TabIndex = 7;
             this.Ellipse_Tool_Button.Text = "Ellipse";
             this.Ellipse_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Ellipse_Tool_Button.UseVisualStyleBackColor = true;
+            this.Ellipse_Tool_Button.UseVisualStyleBackColor = false;
             this.Ellipse_Tool_Button.Click += new System.EventHandler(this.Ellipse_Tool_Button_Click);
             // 
             // Color_Button
             // 
+            this.Color_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Color_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Color_Button.FlatAppearance.BorderSize = 3;
             this.Color_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -167,11 +174,13 @@
             this.Color_Button.Size = new System.Drawing.Size(55, 46);
             this.Color_Button.TabIndex = 8;
             this.Color_Button.Text = "color";
-            this.Color_Button.UseVisualStyleBackColor = true;
+            this.Color_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Color_Button.UseVisualStyleBackColor = false;
             this.Color_Button.Click += new System.EventHandler(this.Color_Button_Click);
             // 
             // Eraser_Button
             // 
+            this.Eraser_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Eraser_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Eraser_Button.FlatAppearance.BorderSize = 3;
             this.Eraser_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -184,11 +193,12 @@
             this.Eraser_Button.TabIndex = 9;
             this.Eraser_Button.Text = "Eraser";
             this.Eraser_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eraser_Button.UseVisualStyleBackColor = true;
+            this.Eraser_Button.UseVisualStyleBackColor = false;
             this.Eraser_Button.Click += new System.EventHandler(this.Eraser_Button_Click);
             // 
             // Circle_Tool_Button
             // 
+            this.Circle_Tool_Button.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Circle_Tool_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Circle_Tool_Button.FlatAppearance.BorderSize = 3;
             this.Circle_Tool_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -201,7 +211,7 @@
             this.Circle_Tool_Button.TabIndex = 10;
             this.Circle_Tool_Button.Text = "Circle";
             this.Circle_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Circle_Tool_Button.UseVisualStyleBackColor = true;
+            this.Circle_Tool_Button.UseVisualStyleBackColor = false;
             this.Circle_Tool_Button.Click += new System.EventHandler(this.Circle_Tool_Button_Click);
             // 
             // PaintSuperForm

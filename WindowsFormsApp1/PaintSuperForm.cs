@@ -6,6 +6,7 @@ namespace WindowsFormsApp1
 {
     public partial class PaintSuperForm : Form
     {
+        //defining variables
         enum Drawingtool
         {
             pen,
@@ -30,12 +31,14 @@ namespace WindowsFormsApp1
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
         int brushsizetrackbarvalue;
+
+        //initializing form components
         public PaintSuperForm()
         {
             InitializeComponent();
             InitializeCustomComponents();
         }
-        public void InitializeCustomComponents()
+        public void InitializeCustomComponents()        //inittializes live variables
         {
             this.Width = 900;
             this.Height = 600;
@@ -48,6 +51,7 @@ namespace WindowsFormsApp1
             openFileDialog = new OpenFileDialog();
             saveFileDialog = new SaveFileDialog();
         }
+        //mouse down hadles rising edge logic
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             drawing = true;
@@ -56,6 +60,7 @@ namespace WindowsFormsApp1
             xinitial = e.X;
             yinitial = e.Y;
         }
+        //mouse move handles continous logic
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             pen = new Pen(Color, BrushSize);
@@ -84,6 +89,7 @@ namespace WindowsFormsApp1
             xsize = e.X - xinitial;
             ysize = e.Y - yinitial;
         }
+        //mouse up handles falling edge logic
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             drawing = false;
@@ -111,6 +117,7 @@ namespace WindowsFormsApp1
                     break;
             }
         }
+        //saves bitmap to jpeg format
         private void Save_Button_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image != null)
@@ -124,6 +131,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        //loads jpeg into picture box
         private void Load_Button_Click(object sender, EventArgs e)
         {
             openFileDialog.Filter = "JPEG Files|*.jpg;*.jpeg|All Files|*.*";
@@ -134,6 +142,7 @@ namespace WindowsFormsApp1
                 pictureBox1.Image = bitmap;
             }
         }
+        //handles tool previews
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics gdraw = e.Graphics;

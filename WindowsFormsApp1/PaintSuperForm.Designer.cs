@@ -40,6 +40,7 @@
             this.ColorDialog = new System.Windows.Forms.ColorDialog();
             this.Eraser_Button = new System.Windows.Forms.Button();
             this.Circle_Tool_Button = new System.Windows.Forms.Button();
+            this.Clear_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,11 +215,28 @@
             this.Circle_Tool_Button.UseVisualStyleBackColor = false;
             this.Circle_Tool_Button.Click += new System.EventHandler(this.Circle_Tool_Button_Click);
             // 
+            // Clear_Button
+            // 
+            this.Clear_Button.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Clear_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Clear_Button.FlatAppearance.BorderSize = 3;
+            this.Clear_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Clear_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Clear_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear_Button.Location = new System.Drawing.Point(683, 27);
+            this.Clear_Button.Name = "Clear_Button";
+            this.Clear_Button.Size = new System.Drawing.Size(55, 46);
+            this.Clear_Button.TabIndex = 11;
+            this.Clear_Button.Text = "Clear";
+            this.Clear_Button.UseVisualStyleBackColor = false;
+            this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
+            // 
             // PaintSuperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 643);
+            this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Circle_Tool_Button);
             this.Controls.Add(this.Eraser_Button);
             this.Controls.Add(this.Color_Button);
@@ -250,6 +268,7 @@
         private System.Windows.Forms.ColorDialog ColorDialog;
         private System.Windows.Forms.Button Eraser_Button;
         private System.Windows.Forms.Button Circle_Tool_Button;
+        private System.Windows.Forms.Button Clear_Button;
     }
 }
 

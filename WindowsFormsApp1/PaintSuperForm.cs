@@ -182,5 +182,10 @@ namespace WindowsFormsApp1
         }
         private void Eraser_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.eraser;
         private void Circle_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.circle;
+        private void Clear_Button_Click(object sender, EventArgs e)
+        {
+            g.Clear(Color.White);
+            pictureBox1.Image = bitmap;
+        }
     }
 }

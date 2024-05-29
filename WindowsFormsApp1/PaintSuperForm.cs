@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
         int x, y, xsize, ysize, xinitial, yinitial, circlesize;
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
-        int brushsizetrackbarvalue;
 
         //initializing form components
         public PaintSuperForm()
@@ -54,6 +53,7 @@ namespace WindowsFormsApp1
         //mouse down hadles rising edge logic
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+            g = Graphics.FromImage(bitmap);
             drawing = true;
             py = e.Location;
 
@@ -63,6 +63,7 @@ namespace WindowsFormsApp1
         //mouse move handles continous logic
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
+            g = Graphics.FromImage(bitmap);
             pen = new Pen(Color, BrushSize);
             if (drawing == true)
             {
@@ -92,6 +93,7 @@ namespace WindowsFormsApp1
         //mouse up handles falling edge logic
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
+            g = Graphics.FromImage(bitmap);
             drawing = false;
             pen = new Pen(Color, BrushSize);
             xsize = x - xinitial;
@@ -127,7 +129,8 @@ namespace WindowsFormsApp1
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    bitmap.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    Bitmap tempbitmap = bitmap;
+                    tempbitmap.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
             }
         }

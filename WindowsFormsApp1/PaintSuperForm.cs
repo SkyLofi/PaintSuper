@@ -53,7 +53,6 @@ namespace WindowsFormsApp1
         //mouse down hadles rising edge logic
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            g = Graphics.FromImage(bitmap);
             drawing = true;
             py = e.Location;
 
@@ -63,7 +62,6 @@ namespace WindowsFormsApp1
         //mouse move handles continous logic
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            g = Graphics.FromImage(bitmap);
             pen = new Pen(Color, BrushSize);
             if (drawing == true)
             {
@@ -93,7 +91,6 @@ namespace WindowsFormsApp1
         //mouse up handles falling edge logic
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            g = Graphics.FromImage(bitmap);
             drawing = false;
             pen = new Pen(Color, BrushSize);
             xsize = x - xinitial;
@@ -143,6 +140,7 @@ namespace WindowsFormsApp1
             {
                 bitmap = new Bitmap(openFileDialog.FileName);
                 pictureBox1.Image = bitmap;
+                g = Graphics.FromImage(bitmap);
             }
         }
         //handles tool previews

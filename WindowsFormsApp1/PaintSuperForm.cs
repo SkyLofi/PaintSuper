@@ -37,7 +37,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             InitializeCustomComponents();
         }
-        public void InitializeCustomComponents()        //inittializes live variables
+        //inittializes live variables
+        public void InitializeCustomComponents()
         {
             this.Width = 900;
             this.Height = 600;
@@ -135,37 +136,31 @@ namespace WindowsFormsApp1
         private void Load_Button_Click(object sender, EventArgs e)
         {
             openFileDialog.Filter = "JPEG Files|*.jpg;*.jpeg|All Files|*.*";
+            openFileDialog.FileName = "image.jpg";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 bitmap = new Bitmap(openFileDialog.FileName);
-                pictureBox1.Image = bitmap;
                 g = Graphics.FromImage(bitmap);
+                pictureBox1.Image = bitmap;
             }
         }
         //handles tool previews
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             Graphics gdraw = e.Graphics;
-            if (drawing == true)
+            if(drawing == true)
             {
                 switch (drawingtool)
                 {
-                    case Drawingtool.ellipse:
-                        gdraw.DrawEllipse(pen, xinitial, yinitial, xsize, ysize);
-                        break;
-
                     case Drawingtool.rectangle:
                         gdraw.DrawRectangle(pen, xinitial, yinitial, xsize, ysize);
                         break;
-
+                    case Drawingtool.ellipse:
+                        gdraw.DrawEllipse(pen, xinitial, yinitial, xsize, ysize);
+                        break;
                     case Drawingtool.line:
                         gdraw.DrawLine(pen, xinitial, yinitial, x, y);
-                        break;
-
-                    case Drawingtool.circle:
-                        circlesize = xsize;
-                        gdraw.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
                         break;
                 }
             }

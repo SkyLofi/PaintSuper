@@ -162,6 +162,10 @@ namespace WindowsFormsApp1
                     case Drawingtool.line:
                         gdraw.DrawLine(pen, xinitial, yinitial, x, y);
                         break;
+                    case Drawingtool.circle:
+                        circlesize = xsize;
+                        gdraw.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
+                        break;
                 }
             }
         }

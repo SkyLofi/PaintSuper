@@ -14,7 +14,8 @@ namespace WindowsFormsApp1
             circle,
             ellipse,
             line,
-            eraser
+            eraser,
+            pentagon
         }
         ColorDialog colordialog = new ColorDialog();
         Color Color = Color.Black;
@@ -115,6 +116,15 @@ namespace WindowsFormsApp1
                     circlesize = xsize;
                     g.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
                     break;
+                case Drawingtool.pentagon:
+                    Point[] points = new Point[5];
+                    points[0] = new Point(xinitial + xsize / 2, yinitial);
+                    points[1] = new Point(xinitial + xsize, yinitial + ysize / 3);
+                    points[2] = new Point(xinitial + xsize * 2 / 3, yinitial + ysize);
+                    points[3] = new Point(xinitial + xsize / 3, yinitial + ysize);
+                    points[4] = new Point(xinitial, yinitial + ysize / 3);
+                    g.DrawPolygon(pen, points);
+                    break;
             }
         }
         //saves bitmap to jpeg format
@@ -166,10 +176,20 @@ namespace WindowsFormsApp1
                         circlesize = xsize;
                         gdraw.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
                         break;
+                    case Drawingtool.pentagon:
+                        Point[] points = new Point[5];
+                        points[0] = new Point(xinitial + xsize / 2, yinitial);
+                        points[1] = new Point(xinitial + xsize, yinitial + ysize / 3);
+                        points[2] = new Point(xinitial + xsize * 2 / 3, yinitial + ysize);
+                        points[3] = new Point(xinitial + xsize / 3, yinitial + ysize);
+                        points[4] = new Point(xinitial, yinitial + ysize / 3);
+                        gdraw.DrawPolygon(pen, points);
+                        break;
                 }
             }
         }
         private void Line_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.line;
+        private void Pentagon_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.pentagon;
         private void Pen_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.pen;
         private void Rectangle_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.rectangle;
         private void Ellipse_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.ellipse;

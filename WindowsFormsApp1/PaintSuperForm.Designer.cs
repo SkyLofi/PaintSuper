@@ -41,6 +41,7 @@
             this.Eraser_Button = new System.Windows.Forms.Button();
             this.Circle_Tool_Button = new System.Windows.Forms.Button();
             this.Clear_Button = new System.Windows.Forms.Button();
+            this.Pentagon_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,7 +171,7 @@
             this.Color_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Color_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Color_Button.Image = global::WindowsFormsApp1.Properties.Resources.color;
-            this.Color_Button.Location = new System.Drawing.Point(537, 27);
+            this.Color_Button.Location = new System.Drawing.Point(585, 27);
             this.Color_Button.Name = "Color_Button";
             this.Color_Button.Size = new System.Drawing.Size(55, 46);
             this.Color_Button.TabIndex = 8;
@@ -188,7 +189,7 @@
             this.Eraser_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Eraser_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eraser_Button.Image = global::WindowsFormsApp1.Properties.Resources.eraser;
-            this.Eraser_Button.Location = new System.Drawing.Point(598, 27);
+            this.Eraser_Button.Location = new System.Drawing.Point(646, 27);
             this.Eraser_Button.Name = "Eraser_Button";
             this.Eraser_Button.Size = new System.Drawing.Size(55, 46);
             this.Eraser_Button.TabIndex = 9;
@@ -223,7 +224,7 @@
             this.Clear_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Clear_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Clear_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clear_Button.Location = new System.Drawing.Point(683, 27);
+            this.Clear_Button.Location = new System.Drawing.Point(725, 27);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(55, 46);
             this.Clear_Button.TabIndex = 11;
@@ -231,11 +232,29 @@
             this.Clear_Button.UseVisualStyleBackColor = false;
             this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
             // 
+            // Pentagon_Button
+            // 
+            this.Pentagon_Button.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Pentagon_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Pentagon_Button.FlatAppearance.BorderSize = 3;
+            this.Pentagon_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Pentagon_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Pentagon_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pentagon_Button.Location = new System.Drawing.Point(507, 27);
+            this.Pentagon_Button.Name = "Pentagon_Button";
+            this.Pentagon_Button.Size = new System.Drawing.Size(55, 46);
+            this.Pentagon_Button.TabIndex = 12;
+            this.Pentagon_Button.Text = "pentagon";
+            this.Pentagon_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Pentagon_Button.UseVisualStyleBackColor = false;
+            this.Pentagon_Button.Click += new System.EventHandler(this.Pentagon_Button_Click);
+            // 
             // PaintSuperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 643);
+            this.Controls.Add(this.Pentagon_Button);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Circle_Tool_Button);
             this.Controls.Add(this.Eraser_Button);
@@ -269,6 +288,7 @@
         private System.Windows.Forms.Button Eraser_Button;
         private System.Windows.Forms.Button Circle_Tool_Button;
         private System.Windows.Forms.Button Clear_Button;
+        private System.Windows.Forms.Button Pentagon_Button;
     }
 }
 

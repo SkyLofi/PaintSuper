@@ -87,8 +87,8 @@ namespace WindowsFormsApp1
             x = e.X;
             y = e.Y;
 
-            xsize = e.X - xinitial;
-            ysize = e.Y - yinitial;
+            xsize = |e.X - xinitial|;
+            ysize = |e.Y - yinitial|;
         }
         //mouse up handles falling edge logic
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)

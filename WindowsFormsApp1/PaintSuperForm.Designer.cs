@@ -49,7 +49,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1128, 619);
+            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -65,7 +65,7 @@
             this.Load_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Load_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Load_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Load_Button.Location = new System.Drawing.Point(39, 27);
+            this.Load_Button.Location = new System.Drawing.Point(36, 26);
             this.Load_Button.Name = "Load_Button";
             this.Load_Button.Size = new System.Drawing.Size(55, 46);
             this.Load_Button.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.Save_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Save_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Save_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Save_Button.Location = new System.Drawing.Point(100, 27);
+            this.Save_Button.Location = new System.Drawing.Point(97, 26);
             this.Save_Button.Name = "Save_Button";
             this.Save_Button.Size = new System.Drawing.Size(55, 46);
             this.Save_Button.TabIndex = 2;
@@ -98,7 +98,7 @@
             this.Pen_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Pen_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pen_Tool_Button.Image = global::WindowsFormsApp1.Properties.Resources.pencil;
-            this.Pen_Tool_Button.Location = new System.Drawing.Point(202, 27);
+            this.Pen_Tool_Button.Location = new System.Drawing.Point(199, 26);
             this.Pen_Tool_Button.Name = "Pen_Tool_Button";
             this.Pen_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Pen_Tool_Button.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.Line_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Line_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Line_Tool_Button.Image = global::WindowsFormsApp1.Properties.Resources.line;
-            this.Line_Tool_Button.Location = new System.Drawing.Point(263, 27);
+            this.Line_Tool_Button.Location = new System.Drawing.Point(260, 26);
             this.Line_Tool_Button.Name = "Line_Tool_Button";
             this.Line_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Line_Tool_Button.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.Rectangle_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Rectangle_Tool_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rectangle_Tool_Button.Image = global::WindowsFormsApp1.Properties.Resources.rectangle;
-            this.Rectangle_Tool_Button.Location = new System.Drawing.Point(324, 27);
+            this.Rectangle_Tool_Button.Location = new System.Drawing.Point(321, 26);
             this.Rectangle_Tool_Button.Name = "Rectangle_Tool_Button";
             this.Rectangle_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Rectangle_Tool_Button.TabIndex = 5;
@@ -153,7 +153,7 @@
             this.Ellipse_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Ellipse_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ellipse_Tool_Button.Image = global::WindowsFormsApp1.Properties.Resources.circle;
-            this.Ellipse_Tool_Button.Location = new System.Drawing.Point(385, 27);
+            this.Ellipse_Tool_Button.Location = new System.Drawing.Point(382, 26);
             this.Ellipse_Tool_Button.Name = "Ellipse_Tool_Button";
             this.Ellipse_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Ellipse_Tool_Button.TabIndex = 7;
@@ -171,7 +171,7 @@
             this.Color_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Color_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Color_Button.Image = global::WindowsFormsApp1.Properties.Resources.color;
-            this.Color_Button.Location = new System.Drawing.Point(585, 27);
+            this.Color_Button.Location = new System.Drawing.Point(582, 26);
             this.Color_Button.Name = "Color_Button";
             this.Color_Button.Size = new System.Drawing.Size(55, 46);
             this.Color_Button.TabIndex = 8;
@@ -189,7 +189,7 @@
             this.Eraser_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Eraser_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eraser_Button.Image = global::WindowsFormsApp1.Properties.Resources.eraser;
-            this.Eraser_Button.Location = new System.Drawing.Point(646, 27);
+            this.Eraser_Button.Location = new System.Drawing.Point(643, 26);
             this.Eraser_Button.Name = "Eraser_Button";
             this.Eraser_Button.Size = new System.Drawing.Size(55, 46);
             this.Eraser_Button.TabIndex = 9;
@@ -207,7 +207,7 @@
             this.Circle_Tool_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Circle_Tool_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Circle_Tool_Button.Image = global::WindowsFormsApp1.Properties.Resources.circle;
-            this.Circle_Tool_Button.Location = new System.Drawing.Point(446, 27);
+            this.Circle_Tool_Button.Location = new System.Drawing.Point(443, 26);
             this.Circle_Tool_Button.Name = "Circle_Tool_Button";
             this.Circle_Tool_Button.Size = new System.Drawing.Size(55, 46);
             this.Circle_Tool_Button.TabIndex = 10;
@@ -224,7 +224,7 @@
             this.Clear_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Clear_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Clear_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clear_Button.Location = new System.Drawing.Point(725, 27);
+            this.Clear_Button.Location = new System.Drawing.Point(722, 26);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(55, 46);
             this.Clear_Button.TabIndex = 11;
@@ -240,20 +240,20 @@
             this.Pentagon_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Pentagon_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Pentagon_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Pentagon_Button.Location = new System.Drawing.Point(507, 27);
+            this.Pentagon_Button.Location = new System.Drawing.Point(504, 26);
             this.Pentagon_Button.Name = "Pentagon_Button";
             this.Pentagon_Button.Size = new System.Drawing.Size(55, 46);
             this.Pentagon_Button.TabIndex = 12;
             this.Pentagon_Button.Text = "pentagon";
             this.Pentagon_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Pentagon_Button.UseVisualStyleBackColor = false;
-            this.Pentagon_Button.Click += new System.EventHandler(this.Pentagon_Button_Click);
+            this.Pentagon_Button.Click += new System.EventHandler(this.Polygon_Button_Click);
             // 
             // PaintSuperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 643);
+            this.ClientSize = new System.Drawing.Size(821, 572);
             this.Controls.Add(this.Pentagon_Button);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Circle_Tool_Button);
@@ -267,6 +267,7 @@
             this.Controls.Add(this.Load_Button);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(837, 578);
             this.Name = "PaintSuperForm";
             this.Text = "PaintSuper";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

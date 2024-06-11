@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
             ellipse,
             line,
             eraser,
-            pentagon
+            polygon
         }
         ColorDialog colordialog = new ColorDialog();
         Color Color = Color.Black;
@@ -60,6 +60,8 @@ namespace WindowsFormsApp1
 
             xinitial = e.X;
             yinitial = e.Y;
+            xsize = 0;
+            ysize = 0;
         }
         //mouse move handles continous logic
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -105,7 +107,7 @@ namespace WindowsFormsApp1
                     break;
 
                 case Drawingtool.rectangle:
-                    g.DrawRectangle(pen, xinitial, yinitial, xsize, ysize);
+                    g.DrawPolygon(pen, new Point[] { new Point(xinitial, yinitial), new Point(x, yinitial), new Point(x, y), new Point(xinitial, y) });
                     break;
 
                 case Drawingtool.line:
@@ -116,7 +118,8 @@ namespace WindowsFormsApp1
                     circlesize = xsize;
                     g.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
                     break;
-                case Drawingtool.pentagon:
+
+                case Drawingtool.polygon:
                     Point[] points = new Point[5];
                     points[0] = new Point(xinitial + xsize / 2, yinitial);
                     points[1] = new Point(xinitial + xsize, yinitial + ysize / 3);
@@ -164,7 +167,7 @@ namespace WindowsFormsApp1
                 switch (drawingtool)
                 {
                     case Drawingtool.rectangle:
-                        gdraw.DrawRectangle(pen, xinitial, yinitial, xsize, ysize);
+                        gdraw.DrawPolygon(pen, new Point[] { new Point(xinitial, yinitial), new Point(x, yinitial), new Point(x, y), new Point(xinitial, y) });
                         break;
                     case Drawingtool.ellipse:
                         gdraw.DrawEllipse(pen, xinitial, yinitial, xsize, ysize);
@@ -176,7 +179,7 @@ namespace WindowsFormsApp1
                         circlesize = xsize;
                         gdraw.DrawEllipse(pen, xinitial, yinitial, circlesize, circlesize);
                         break;
-                    case Drawingtool.pentagon:
+                    case Drawingtool.polygon:
                         Point[] points = new Point[5];
                         points[0] = new Point(xinitial + xsize / 2, yinitial);
                         points[1] = new Point(xinitial + xsize, yinitial + ysize / 3);
@@ -189,7 +192,7 @@ namespace WindowsFormsApp1
             }
         }
         private void Line_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.line;
-        private void Pentagon_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.pentagon;
+        private void Polygon_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.polygon;
         private void Pen_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.pen;
         private void Rectangle_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.rectangle;
         private void Ellipse_Tool_Button_Click(object sender, EventArgs e) => drawingtool = Drawingtool.ellipse;

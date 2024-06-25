@@ -42,6 +42,8 @@
             this.Circle_Tool_Button = new System.Windows.Forms.Button();
             this.Clear_Button = new System.Windows.Forms.Button();
             this.Pentagon_Button = new System.Windows.Forms.Button();
+            this.Redo_Button = new System.Windows.Forms.Button();
+            this.Undo_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,7 +216,7 @@
             this.Circle_Tool_Button.Text = "Circle";
             this.Circle_Tool_Button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Circle_Tool_Button.UseVisualStyleBackColor = false;
-            this.Circle_Tool_Button.Click += new System.EventHandler(this.Circle_Tool_Button_Click);
+            this.Circle_Tool_Button.Click += new System.EventHandler(this.Circle_Button_Click);
             // 
             // Clear_Button
             // 
@@ -228,7 +230,7 @@
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(55, 46);
             this.Clear_Button.TabIndex = 11;
-            this.Clear_Button.Text = "Clear";
+            this.Clear_Button.Text = "New";
             this.Clear_Button.UseVisualStyleBackColor = false;
             this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
             // 
@@ -249,11 +251,45 @@
             this.Pentagon_Button.UseVisualStyleBackColor = false;
             this.Pentagon_Button.Click += new System.EventHandler(this.Polygon_Button_Click);
             // 
+            // Redo_Button
+            // 
+            this.Redo_Button.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Redo_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Redo_Button.FlatAppearance.BorderSize = 3;
+            this.Redo_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Redo_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Redo_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Redo_Button.Location = new System.Drawing.Point(97, 78);
+            this.Redo_Button.Name = "Redo_Button";
+            this.Redo_Button.Size = new System.Drawing.Size(55, 46);
+            this.Redo_Button.TabIndex = 13;
+            this.Redo_Button.Text = "Redo";
+            this.Redo_Button.UseVisualStyleBackColor = false;
+            this.Redo_Button.Click += new System.EventHandler(this.Redo_Button_Click);
+            // 
+            // Undo_Button
+            // 
+            this.Undo_Button.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Undo_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Undo_Button.FlatAppearance.BorderSize = 3;
+            this.Undo_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Undo_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Undo_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Undo_Button.Location = new System.Drawing.Point(36, 78);
+            this.Undo_Button.Name = "Undo_Button";
+            this.Undo_Button.Size = new System.Drawing.Size(55, 46);
+            this.Undo_Button.TabIndex = 14;
+            this.Undo_Button.Text = "Undo";
+            this.Undo_Button.UseVisualStyleBackColor = false;
+            this.Undo_Button.Click += new System.EventHandler(this.Undo_Button_Click);
+            // 
             // PaintSuperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 572);
+            this.Controls.Add(this.Undo_Button);
+            this.Controls.Add(this.Redo_Button);
             this.Controls.Add(this.Pentagon_Button);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Circle_Tool_Button);
@@ -270,6 +306,8 @@
             this.MinimumSize = new System.Drawing.Size(837, 578);
             this.Name = "PaintSuperForm";
             this.Text = "PaintSuper";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PaintSuperForm_FormClosing);
+            this.Load += new System.EventHandler(this.PaintSuperForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -290,6 +328,8 @@
         private System.Windows.Forms.Button Circle_Tool_Button;
         private System.Windows.Forms.Button Clear_Button;
         private System.Windows.Forms.Button Pentagon_Button;
+        private System.Windows.Forms.Button Redo_Button;
+        private System.Windows.Forms.Button Undo_Button;
     }
 }
 

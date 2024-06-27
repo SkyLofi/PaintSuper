@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
         private bool dirtydocument = false;
         private Stack<Bitmap> Undostack;
         private Stack<Bitmap> Redostack;
+        private bool justUndone = false;
         //initializing form components
         public PaintSuperForm()
         {
@@ -64,6 +65,8 @@ namespace WindowsFormsApp1
         //mouse down handles rising edge logic
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+            SaveState();
+            Redostack.Clear();
             drawing = true;
             py = e.Location;
 
@@ -112,7 +115,6 @@ namespace WindowsFormsApp1
             g = Graphics.FromImage(bitmap);
             drawinglogic(g);
             drawing = false;
-            SaveState();
         }
         
         //saves bitmap to jpeg format
@@ -206,11 +208,11 @@ namespace WindowsFormsApp1
 
         private void Undo_Button_Click(object sender, EventArgs e)
         {
-            if (Undostack.Count > 1) // Ensure there's always an initial state left in the undo stack
+            if (Undostack.Count > 1)
             {
                 Bitmap current = Undostack.Pop();
-                Redostack.Push(current);
-                bitmap = Undostack.Peek(); // Peek instead of Pop to always leave the initial state
+                Redostack.Push(bitmap);
+                bitmap = current;
                 gdraw = Graphics.FromImage(bitmap);
                 pictureBox1.Image = bitmap;
             }
@@ -222,11 +224,11 @@ namespace WindowsFormsApp1
 
         private void Redo_Button_Click(object sender, EventArgs e)
         {
-            if (Redostack.Count > 0)
+            if(Redostack.Count > 0)
             {
-                Bitmap redoBitmap = Redostack.Pop();
-                Undostack.Push(redoBitmap);
-                bitmap = redoBitmap;
+                Bitmap current = Redostack.Pop();
+                Undostack.Push(bitmap);
+                bitmap = current;
                 gdraw = Graphics.FromImage(bitmap);
                 pictureBox1.Image = bitmap;
             }
